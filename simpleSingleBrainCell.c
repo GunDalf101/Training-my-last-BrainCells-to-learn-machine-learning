@@ -9,7 +9,6 @@ float train[][2] = {
 };
 #define train_count sizeof(train) / sizeof(train[0])
 float rand_float(){
-	srand(time(NULL));
 	return (float)rand() / (float)RAND_MAX;
 }
 
@@ -26,6 +25,7 @@ float model_cost(float w, float b){
 }
 
 int main(){
+	srand(time(NULL));
 	printf("training my last brain cell to do math...\n");
 	sleep(1);
 	float w = rand_float() * 10;
